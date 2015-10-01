@@ -1,0 +1,8 @@
+User-Manual
+
+1. Click the CCful.html.
+2. Webpage that contains Camouflage Cursor Login System will be displayed.
+3. Click any 4 digit.
+4. Will forward to privatezone.html.
+
+p/s: Comparison PIN and databse is not developed.

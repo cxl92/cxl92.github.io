@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Camouflage Cursor Login System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+
+        //Initialize function for each cursor
+        $(document).ready(function () {
+            animateDiv($('.a'));
+            animateDiv($('.b'));
+            animateDiv($('.c'));
+            animateDiv($('.d'));
+            animateDiv($('.e'));
+            animateDiv($('.f'));
+            animateDiv($('.g'));
+            animateDiv($('.h'));
+            animateDiv($('.i'));
+            animateDiv($('.j'));
+            animateDiv($('.k'));
+            animateDiv($('.l'));
+            animateDiv($('.m'));
+            animateDiv($('.n'));
+            animateDiv($('.o'));
+            animateDiv($('.p'));
+            animateDiv($('.q'));
+            animateDiv($('.r'));
+            animateDiv($('.s'));
+            animateDiv($('.t'));
+            animateDiv($('.u'));
+            animateDiv($('.v'));
+            animateDiv($('.w'));
+            animateDiv($('.x'));
+            animateDiv($('.y'));
+            animateDiv($('.aa'));
+            animateDiv($('.ab'));
+            animateDiv($('.ac'));
+            animateDiv($('.ad'));
+            animateDiv($('.ae'));
+            animateDiv($('.af'));
+            animateDiv($('.ag'));
+            animateDiv($('.ah'));
+            animateDiv($('.ai'));
+            animateDiv($('.aj'));
+            animateDiv($('.ak'));
+            animateDiv($('.al'));
+            animateDiv($('.am'));
+            animateDiv($('.an'));
+            animateDiv($('.ao'));
+            animateDiv($('.ap'));
+            animateDiv($('.aq'));
+            animateDiv($('.ar'));
+            animateDiv($('.as'));
+            animateDiv($('.at'));
+            animateDiv($('.au'));
+            animateDiv($('.av'));
+            animateDiv($('.aw'));
+            animateDiv($('.ax'));
+            animateDiv($('.ay'));
+        });
+
+        //Set new random position of cursor
+        function makeNewPosition($container) {
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $container.height() - 50;
+            var w = $container.width() - 50;
+
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+
+            return [nh, nw];
+
+        }
+
+        //Set random movement to each cursor
+        function animateDiv($target) {
+            var newq = makeNewPosition($target.parent());
+            var oldq = $target.offset();
+            var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+            $target.animate({
+                top: newq[0],
+                left: newq[1]
+            }, speed, function () {
+                animateDiv($target);
+            }); 
+        };
+
+        //Set speed of moving cursor
+        function calcSpeed(prev, next) {
+
+            var x = Math.abs(prev[1] - next[1]);
+            var y = Math.abs(prev[0] - next[0]);
+
+            var greatest = x > y ? x : y;
+
+            var speedModifier = 0.2;
+
+            var speed = Math.ceil(greatest / speedModifier);
+
+            return speed;
+        }
+
+    </script>
+
+    <!--CSS of moving cursor, header and footer-->
+    <style type="text/css">
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        footer {
+            bottom: 0;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        div.a {
+            width: 5%;
+            height: 5%;
+            background-repeat:no-repeat;
+            position:fixed ;
+            background-image:url("cursor4.png")
+        }
+        
+        div.b {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.c {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.d {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.e {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.f {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.g {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.h {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.i {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.j {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.k {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.l {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.m {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.n {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.o {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.p {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.q {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.r {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.s {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.t {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.u {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.v {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.w {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.x {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.y {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.aa {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ab {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ac {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ad {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ae {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.af {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ag {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ah {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ai {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.aj {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ak {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.al {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.am {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.an {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ao {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ap {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.aq {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ar {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.as {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.at {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.au {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.av {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.aw {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ax {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+
+        div.ay {
+            width: 5%;
+            height: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background-image: url("cursor4.png");
+        }
+    </style>
+</head>
+<body onload="emptyCode();">
+
+    <!--Division of moving cursor-->
+    <div class='a'></div>
+    <div class='b'></div>
+    <div class='c'></div>
+    <div class='d'></div>
+    <div class='e'></div>
+    <div class='f'></div>
+    <div class='g'></div>
+    <div class='h'></div>
+    <div class='i'></div>
+    <div class='j'></div>
+    <div class='k'></div>
+    <div class='l'></div>
+    <div class='m'></div>
+    <div class='n'></div>
+    <div class='o'></div>
+    <div class='p'></div>
+    <div class='q'></div>
+    <div class='r'></div>
+    <div class='s'></div>
+    <div class='t'></div>
+    <div class='u'></div>
+    <div class='v'></div>
+    <div class='w'></div>
+    <div class='x'></div>
+    <div class='y'></div>
+    <div class='aa'></div>
+    <div class='ab'></div>
+    <div class='ac'></div>
+    <div class='ad'></div>
+    <div class='ae'></div>
+    <div class='af'></div>
+    <div class='ag'></div>
+    <div class='ah'></div>
+    <div class='ai'></div>
+    <div class='aj'></div>
+    <div class='ak'></div>
+    <div class='al'></div>
+    <div class='am'></div>
+    <div class='an'></div>
+    <div class='ao'></div>
+    <div class='ap'></div>
+    <div class='aq'></div>
+    <div class='ar'></div>
+    <div class='as'></div>
+    <div class='at'></div>
+    <div class='au'></div>
+    <div class='av'></div>
+    <div class='aw'></div>
+    <div class='ax'></div>
+    <div class='ay'></div>
+
+    <!--Header for title-->
+    <header><h2><u>Camouflage Cursor Login System</u></h2></header>
+
+    <!--Script for keypad-->
+    <script type="text/javascript">
+        function addCode(key) {
+            var code = document.forms[0].code;
+            if (code.value.length < 4) {
+                code.value = code.value + key;
+            }
+            if (code.value.length == 4) {
+                document.getElementById("message").style.display = "block";
+                setTimeout(submitForm, 1000);
+            }
+        }
+
+        function submitForm() {
+            document.forms[0].submit();
+        }
+
+        function emptyCode() {
+            document.forms[0].code.value = "";
+        }
+    </script>
+
+    <!--CSS of keypad-->
+    <style>
+        body {
+            text-align: center;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            background-image:url('background.png');
+            background-position:center;
+        }
+
+        #keypad {
+            margin: auto;
+            margin-top: 20px;
+        }
+
+            #keypad tr td {
+                vertical-align: middle;
+                text-align: center;
+                border: 1px solid #000000;
+                font-size: 30px;
+                font-weight: bold;
+                width: 100px;
+                height: 80px;
+                cursor: default;
+                background-color: #666666;
+                color: white;
+            }
+
+        .display {
+            width: 125px;
+            margin: 10px auto auto auto;
+            background-color: #000000;
+            color: #00FF00;
+            font-size: 50px;
+            border: 1px solid #999999;
+            text-align: center;
+        }
+
+        #message {
+            text-align: center;
+            color: #009900;
+            font-size: 14px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+
+    <!--Form and table of keypad, PIN display box-->
+    <form action="privatezone.html" method="put">
+        <table id="keypad" cellpadding="5" cellspacing="3">
+            <tr>
+                <td onclick="addCode('*');">1</td>
+                <td onclick="addCode('*');">2</td>
+                <td onclick="addCode('*');">3</td>
+            </tr>
+            <tr>
+                <td onclick="addCode('*');">4</td>
+                <td onclick="addCode('*');">5</td>
+                <td onclick="addCode('*');">6</td>
+            </tr>
+            <tr>
+                <td onclick="addCode('*');">7</td>
+                <td onclick="addCode('*');">8</td>
+                <td onclick="addCode('*');">9</td>
+            </tr>
+            <tr>
+                <td onclick="addCode('*');">*</td>
+                <td onclick="addCode('*');">0</td>
+                <td onclick="addCode('*');">#</td>
+            </tr>
+        </table>
+        <input type="text" name="code" value="" maxlength="4" class="display" readonly="readonly" />
+        <p id="message" >ACCESSING...</p>
+    </form>
+
+    <!--Footer for copyright statement-->
+    <footer>&copy; 2015 Teng Sin Liang. All Copyright Reserved.</footer>
+
+</body>
+</html>
